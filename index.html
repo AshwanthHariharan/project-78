@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Javascript Staements project-78</title>
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <img id="img" src = "The Family Book.png">
+        <div><br><h2 id ="name"></h2></div>
+        <div><br><button id="Next" type="button" onclick=
+            "nextslide()">Next</button>
+        </div>
+
+        <div><br><h1 id="name"></h1>
+        </div>
+
+        
+        <style>
+            body{
+                text-align:center;
+            }
+            
+
+            img{
+                height:450px;
+                width:450px;
+                border-radius:50px;
+            }
+        </style>
+    </body>
+
+    <script>
+        var countclicks=0;
+        function nextslide(){
+        if(countclicks==4){countclicks=0};
+        console.log(countclicks);
+        var family_images = ["Hariharan.jpg","Vidya.jpg","Ashwanth.jpg","Aadhvik.jpg"];
+        var individual_names = ["Hariharan","Vidya","Ashwanth","Aadhvik"];
+        document.getElementById("img").src=family_images[countclicks];
+        document.getElementById("name").innerHTML = individual_names[countclicks];
+        countclicks = countclicks+1};
+    </script>
+</html>
